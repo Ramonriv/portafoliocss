@@ -42,6 +42,40 @@ img {
         width: 200%;
     }
 }
+
+.bt{
+  background: black;
+  color: white;
+  min-height: 35px;
+  margin: 0;
+  border-radius: 3px;
+  border: 0;
+  line-height: 35px;
+  text-align: center;
+  margin: .5em 0 .5em 0;
+  cursor: pointer;
+}
+
+a.bt{
+  display: inline;
+  padding: 7px 10px 7px 10px;
+}
+
+.bt:hover{
+  background: white;
+  color:	  black;
+}
+
+@media only screen and (max-width:480px) { 
+  .bt {
+    width: 100%;
+  }
+  
+  a.bt{
+    display: block;
+    padding: 0;
+  }
+}
 </style>
 <body>
 
@@ -53,11 +87,11 @@ img {
 	<h3 align="center">Departamento de Informática</h3>
   </div>
   <div class="w3-display-topleft w3-container w3-xlarge">
-    <p><button onclick="document.getElementById('resume').style.display='block'" class="w3-button w3-black">Resume</button></p>
-	 <p><button onclick="document.getElementById('bosquejo').style.display='block'" class="w3-button w3-black">Bosquejo</button></p>
-	  <p><button onclick="document.getElementById('forms').style.display='block'" class="w3-button w3-black">Forms</button></p>
-	   <p><button onclick="document.getElementById('table').style.display='block'" class="w3-button w3-black">Table</button></p>
-    <p><button onclick="document.getElementById('contact').style.display='block'" class="w3-button w3-black">Contact</button></p>
+    <p><button onclick="document.getElementById('resume').style.display='block'" class="bt">Resume</button></p>
+	 <p><button onclick="document.getElementById('bosquejo').style.display='block'" class="bt">Bosquejo</button></p>
+	  <p><button onclick="document.getElementById('forms').style.display='block'" class="bt">Forms</button></p>
+	   <p><button onclick="document.getElementById('table').style.display='block'" class="bt">Table</button></p>
+    <p><button onclick="document.getElementById('contact').style.display='block'" class="bt">Contact</button></p>
   </div>
 
 </div>
@@ -337,7 +371,7 @@ function fahrenheit(c){ return 9/5*c +32;}
 function rankine(c){ return 9/5*c +492;}
 function reaumur(c){ return 4/5*c;}
 var temp = ["Celcious", "Kelvin", "Fahrenheit", "Rankine", "Reaumur", "Estado de Agua"];
-var text = "<table border=1 width=50>";
+var text = "<table border=1 width=5>";
 var i, c;
 for (i = 0; i < temp.length; i++) {
 	text += "<th id=myth>"+ temp[i] + "</th>";
