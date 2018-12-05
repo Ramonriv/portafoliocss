@@ -19,6 +19,19 @@ img {
     margin-left: auto;
     margin-right: auto;
 }
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+    width: 100%;
+    border: 1px solid #ddd;
+}
+
+th, td {
+    text-align: left;
+    padding: 8px;
+}
+	
 /* For desktop: */
 .col-1 {width: 8.33%;}
 .col-2 {width: 16.66%;}
@@ -54,11 +67,11 @@ img {
 	<h3 align="center">Departamento de Informática</h3>
   </div>
   <div class="w3-display-topleft w3-container w3-xlarge">
-    <p><button onclick="document.getElementById('resume').style.display='block'" class="w3-button w3-black">Resume</button></p>
-	 <p><button onclick="document.getElementById('bosquejo').style.display='block'" class="w3-button w3-black">Bosquejo</button></p>
-	  <p><button onclick="document.getElementById('forms').style.display='block'" class="w3-button w3-black">Forms</button></p>
-	   <p><button onclick="document.getElementById('table').style.display='block'" class="w3-button w3-black">Table</button></p>
-    <p><button onclick="document.getElementById('contact').style.display='block'" class="w3-button w3-black">Contact</button></p>
+    <p><button onclick="document.getElementById('resume').style.display='block'" class="w3-button w3-black w3-mobile">Resume</button></p>
+	 <p><button onclick="document.getElementById('bosquejo').style.display='block'" class="w3-button w3-black w3-mobile">Bosquejo</button></p>
+	  <p><button onclick="document.getElementById('forms').style.display='block'" class="w3-button w3-black w3-mobile">Forms</button></p>
+	   <p><button onclick="document.getElementById('table').style.display='block'" class="w3-button w3-black w3-mobile">Table</button></p>
+    <p><button onclick="document.getElementById('contact').style.display='block'" class="w3-button w3-black w3-mobile">Contact</button></p>
   </div>
 
 </div>
@@ -316,7 +329,7 @@ img {
       <span onclick="document.getElementById('table').style.display='none'" class="w3-button w3-display-topright w3-large">x</span>
       <h1>Table</h1>
 	  </div>
-	      <div class="w3-container">
+	      <div style="overflow-x:auto;">
 	<style type="text/css">
 tr#mytr {font-style: italic; 
 		font-style: bold;
@@ -338,7 +351,7 @@ function fahrenheit(c){ return 9/5*c +32;}
 function rankine(c){ return 9/5*c +492;}
 function reaumur(c){ return 4/5*c;}
 var temp = ["Celcious", "Kelvin", "Fahrenheit", "Rankine", "Reaumur", "Estado de Agua"];
-var text = "<table border=1 width=50>";
+var text = "<table border=1>";
 var i, c;
 for (i = 0; i < temp.length; i++) {
 	text += "<th id=myth>"+ temp[i] + "</th>";
@@ -422,3 +435,4 @@ document.getElementById("demo").innerHTML = text +"</table>";
 </div>
 </body>
 </html>
+
